@@ -1,0 +1,19 @@
+  0:00 ------------------------------------------------------------
+  0:00 InitGame: \dmflags\0\fraglimit\20\timelimit\0\sv_hostname\noname\sv_maxclients\8\sv_maxRate\0\sv_minPing\0\sv_maxPing\0\sv_floodProtect\1\g_redTeam\Stroggs\g_blueTeam\Pagans\g_maxGameClients\0\capturelimit\0\version\Q3 1.30 win-x86 Aug 20 2001\g_gametype\0\protocol\66\mapname\Q3DM1\sv_privateClients\0\sv_allowAnonymous\0\sv_allowDownload\0\gamename\baseq3\g_needpass\0
+  0:00 ClientConnect: 0
+  0:00 ClientUserinfoChanged: 0 n\UnnamedPlayer\t\0\model\sarge\hmodel\sarge\g_redteam\\g_blueteam\\c1\4\c2\5\hc\100\w\0\l\0\tt\0\tl\0
+  0:00 ClientUserinfoChanged: 0 n\UnnamedPlayer\t\0\model\sarge\hmodel\sarge\g_redteam\\g_blueteam\\c1\4\c2\5\hc\100\w\0\l\0\tt\0\tl\0
+  0:00 ClientBegin: 0
+  0:03 Item: 0 item_armor_shard
+  0:03 Item: 0 item_armor_shard
+  0:03 Item: 0 item_armor_shard
+  0:06 Item: 0 weapon_rocketlauncher
+  0:09 Item: 0 item_armor_shard
+  0:09 Item: 0 item_armor_shard
+  0:09 Item: 0 item_armor_shard
+  0:09 Item: 0 ammo_cells
+  0:19 Item: 0 weapon_plasmagun
+  0:26 Item: 0 item_armor_body
+  0:33 Item: 0 ammo_shells
+  0:37 ShutdownGame:
+  0:37 ------------------------------------------------------------
