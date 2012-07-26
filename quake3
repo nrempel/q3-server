@@ -1,0 +1,7 @@
+#!/bin/sh
+# Needed to make symlinks/shortcuts work.
+# the binaries must run with correct working directory
+  cd "/opt/quake-server/"
+  ./quake3.x86 $*
+  exit $? 
+  

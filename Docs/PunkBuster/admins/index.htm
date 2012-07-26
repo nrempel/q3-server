@@ -1,0 +1,1162 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>PunkBuster For Server Administrators</title>
+
+<style media="screen" type="text/css"><!--
+   .headertext { font-weight: bolder; font-size: 18px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+   .navtext { font-size: 10px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+   .text { font-size: 14px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+   .text2 { font-size: 12px; font-family: Arial, Helvetica, Geneva, Swiss, SunSans-Regular; }
+   a:hover { color: #666666 }
+   table { line-height: 105% }
+   .small { line-height: 130% }
+--></style>
+</head>
+
+<body bgcolor="black" link="black" text="black" vlink="black">
+
+<center>
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000" class="small"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor=#fffeca> <br>
+<!-- start section -->
+
+<div align="center">
+
+<p><br><center><img src="ttitle1.gif" border="0"></center>
+
+<p><br><br><a href="http://www.evenbalance.com" target="_blank"><img src="tlogo.gif" border="0"></a><br>
+
+<p><br><br><span class="navtext">
+
+Last updated September 28, 2002
+
+<br>
+For the most up-to-date online version of this publication, choose from the following translations:<br>
+<a href=http://www.evenbalance.com/publications/admins target=_blank>English</a>, 
+<a href=http://www.evenbalance.com/publications/admins_fr target=_blank>French</a>, 
+<a href=http://www.evenbalance.com/publications/admins_sp target=_blank>Spanish</a>, 
+<a href=http://www.evenbalance.com/publications/admins_it target=_blank>Italian</a>, or
+<a href=http://www.evenbalance.com/publications/admins_ge target=_blank>German</a>.
+
+<blockquote class="small">
+<p>The following people contributed to this publication:<br> Bj&ouml;rn Christoph, Ken Creedon,
+Stuart Dunsmore, Daniel Ferguson, Tony Ray, Jason Roman, Paul Seale, and Hendrik Thole.
+
+<p><br></p>
+<p><a href="http://www.evenbalance.com" target="_blank">Even Balance, Inc.</a><br>
+P O Box 11395<br>
+Spring, Texas 77391-1395
+
+<p><br></p>
+<p>This publication is © Copyright 2002 by Even Balance, Inc. All Rights Reserved.<br>
+PunkBuster™ Software and the PunkBuster Logo are trademarks of Even Balance, Inc.<br>
+Other trademarks referenced by this publication are the property of their respective owners.<br>
+
+</blockquote>
+</div>
+
+<!-- end section -->
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+
+<p><img src="ttoc1.gif" border="0">
+
+<blockquote>
+
+<ul>
+<li><a href="#intro">Introduction</a>
+<li><a href="#about">What PunkBuster Is All About</a>
+<li><a href="#quickstart">Quick Start Guide</a>
+<li><a href="#basics">The Basics</a>
+    <ul>
+    <li><a href="#integration">Game Integration</a>
+    <li><a href="#subdirectory">PB Subdirectory and File Information</a>
+    <li><a href="#interface">The PunkBuster Interface</a>
+    </ul>
+<li><a href="#enabling">Enabling and Disabling PunkBuster</a>
+<li><a href="#updating">Updating PunkBuster</a>
+<li><a href="#webtool">WebTool</a>
+<li><a href="#commsettings">Commands and Settings</a>
+    <ul>
+    <li><a href="#commands">Commands</a>
+    <li><a href="#settings">Settings</a>
+    </ul>
+<li><a href="#badname">Player Name Management Facility</a>
+<li><a href="#monitoring">Monitoring Game Variables</a>
+<li><a href="#advmonitoring">Advanced Cvar Monitoring</a>
+<li><a href="#screenshots">Screen Capture Facility</a>
+<li><a href="#playerpower">PunkBuster Player Power</a>
+<li><a href="#remote">Remote Logging Facility</a>
+<li><a href="#faq">Frequently Asked Questions</a>
+</ul>
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#intro">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tintro1.gif" border="0">
+
+<blockquote>
+
+<p>This publication is for Server Administrators of online games who are interested in using or finding out more
+   about the PunkBuster Anti-Cheat system.&nbsp; This publication is meant to document PunkBuster for the 
+   following games: 
+   Return to Castle Wolfenstein, by id Software, Inc. and Quake III Arena by id Software, Inc.&nbsp; 
+   PunkBuster editions for other games may vary from the edition described herein.
+
+<p>A great effort has been made to make this publication useful for those new to PunkBuster and
+   also for advanced users of PunkBuster.&nbsp; Any comments or suggestions will be gladly received via
+   email to <a href="mailto:pubs@evenbalance.com">docs@evenbalance.com</a>.
+
+<p>Since this manual is for Server Administrators, we will assume for the most part that the reader is familar 
+   with the Game Console, entering commands, and configuration files.
+
+<p>If you wish to learn about using the PunkBuster Client software for use with playing the game, please
+   see our related publication entitled 'PunkBuster for Players'.
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#about">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tabout1.gif" border="0">
+
+<blockquote>
+
+<p>In September of 2000, a handful of online computer game playing enthusiasts became concerned with
+   the increased activity of cheating in online multiplayer gaming.&nbsp; We decided to do something
+   about the problem.&nbsp; We were aware that a few attempts had been made in the past by others (including
+   the makers of the games themselves) and that they were all generally considered to have failed
+   for the most part.&nbsp; We had a vision of a new way to approach the problem and decided to develop
+   an experimental software system to see if our new approach would work.&nbsp; We believed that once we
+   had submitted and maintained a product for open use that the response from affected online
+   communities would tell us whether or not the experiment was a success.&nbsp; After several months
+   of growth, much hard work, acceptance, and the appreciated beta testing and support of hundreds of
+   thousands of users, we believe that we have a viable solution to fighting the problem of cheating
+   in online multiplayer games: PunkBuster.
+
+<p>PunkBuster is an automatically self-updating client/server Anti-Cheat software system.&nbsp; That
+   means that players run the PunkBuster Client software while they are playing online games and also,
+   PunkBuster Server software is running on the game server that players connect to for gameplay.&nbsp;
+   The PunkBuster system is designed to hold all participants accountable by scanning the game
+   computers looking for known cheats, game hacks, and exploits similar to the way Anti-Virus software
+   would scan a computer looking for a virus.&nbsp; PunkBuster does not modify any files or settings
+   on your computer even if it detects some type of violation, it reports what it finds and, in some
+   cases, will remove offending players from the current game.&nbsp; PunkBuster is optional.&nbsp; A
+   Server Admin who decides to run PunkBuster on his or her Game Server is simply choosing to limit
+   players on said Game Server to players who have chosen to enable PunkBuster on their playing
+   computers.&nbsp; You do not have to enable PunkBuster if you are uncomfortable with the idea of
+   such software.&nbsp; However, PunkBuster is not "spyware" nor is it a trojan - it is designed for
+   groups of honest people to use together in an effort to keep out players who are unwilling to
+   subject their system to an objective third-party software system scanning their computer during gameplay.&nbsp;
+   The activities performed by PunkBuster are generally described on our website and we have also
+   developed and published a Privacy Policy Statement.&nbsp; We take the privacy and security of our
+   users and their computers very seriously and there is no featured provision (documented nor
+   undocumented) whatsoever in our software whereby anyone outside of your computer can gain control
+   of your computer or view / change your private information with or without your knowledge.&nbsp;
+   Additionally, PunkBuster does not transmit your private data files to any other computer nor keep
+   any type of centralized database that tracks any information about your personal files.&nbsp;
+   PunkBuster basically just looks for known cheats and game-hacks while you are playing a PunkBuster
+   enabled game in an effort to authenticate your installation as "clean" for the purpose of
+   consentual multiplayer online gaming.
+
+<p>In mid-2001, a privately funded corporation, Even Balance, Inc. was formed to handle the commercial
+   application of the PunkBuster system.&nbsp; We plan to offer several types of products and services
+   to online gaming communities that are built up around the games we support.&nbsp; We are actively
+   seeking relationships with game software developers who would like to have us provide anti-cheat
+   support for their online multiplayer game titles.
+
+<p>There is no cost for a personal, non-commercial license to use PunkBuster software.&nbsp; Our
+   End User License Agreement must be accepted on-screen before PunkBuster is
+   installed.&nbsp; If you wish to use PunkBuster in any type of commercial environment or in connection
+   with any commercial event, a separate commercial licensing arrangement must be obtained from Even
+   Balance, Inc.&nbsp; To find out more about commercial licensing, send an inquiry via email to
+   <a href="mailto:license@evenbalance.com">license@evenbalance.com</a>.
+
+<p>More information about Even Balance, Inc. and the PunkBuster system can be found on our website at
+   <a href="http://www.evenbalance.com" target="_blank">evenbalance.com</a>.
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#quickstart">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tquick1.gif" border="0">
+
+<blockquote>
+
+<p>If you create a Game Server using the In-Game Browser screen, make sure the PunkBuster setting is set to 'Yes' before 
+   proceeding to create the Server.&nbsp; If running the Game Server strictly in console mode, enter <code>PB_SV_ENABLE</code> to 
+   ensure that the PunkBuster Server software is enabled before proceeding.&nbsp; When PunkBuster is Enabled for the first time, 
+   it will begin operation using the default configuration.&nbsp;  This configuration has been designed to work with all 
+   types of game servers.&nbsp;  Optimizations can later be made by adjusting the PunkBuster settings described later in this 
+   publication to better match the server connection speed, user load, and Admin preferences.&nbsp;  The following are 
+   a few options that can greatly enhance server cheat protection with a relatively easy learning curve.
+
+<p>Once PunkBuster has been enabled, automatic screenshot capturing can be turned on by setting <code>PB_SV_AUTOSS</code> to 1.&nbsp; 
+   To make this (and/or most other PunkBuster setting changes) permanent, enter  the command <code>PB_SV_WRITECFG</code>.&nbsp; 
+   This will save most current PunkBuster settings to the PunkBuster configuration file "pbsv.cfg".&nbsp;  PunkBuster loads 
+   this configuration file every time it is run.&nbsp;  When the automatic screenshot capturing has been turned on, screenshots 
+   will begin to be routinely taken of all the servers’ connected players and stored in the "svss" folder.&nbsp;  The default 
+   limit to the number of captured screenshot files is 100 which can be changed with the command <code>PB_SV_SSCEILING</code>.
+   Once the limit has been reached, the PunkBuster server will begin to overwrite the current files starting with the 
+   lowest numbered file first in an endless cycle.
+
+<p>For Server Admins who wish to log important (but verbose) information about each connected player's cvars during gameplay, 
+   enter the following four setting changes into the Game Console.&nbsp; These will have the effect of logging (every 15 minutes) 
+   all user-created and non-default player cvars to special log files with a <code>.var</code> extension 
+   (in the "svlogs" folder).
+
+<ul><code>
+<li>PB_SV_CvarLogging 2
+<li>PB_SV_CvarWalk 4
+<li>PB_SV_CvarUserPulse 15
+<li>PB_SV_CvarChangedPulse 15
+</code><ul>
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#basics">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tbasics1.gif" border="0"></p>
+
+<a name="#integration">
+<p><img src="tgame1.gif" border="0">
+
+<blockquote>
+
+<p>Although there is code inside the Game to allow PunkBuster to be integrated tightly with the Game,
+   the PunkBuster software is completely separate from the Game software.&nbsp; It resides in its own
+   folder called "pb" inside the game folder.&nbsp; For example, if your game is installed into a
+   folder called "c:\games\rtcw", then the PunkBuster files will be in "c:\games\rtcw\pb".&nbsp; To
+   remove or uninstall PunkBuster from your system, simply delete the "pb" folder using the explorer
+   program on your computer.&nbsp; PunkBuster does not modify the system registry nor hide files or
+   other information anywhere else on your system.
+
+<p>There are only a few files in the "pb" folder when PunkBuster is first installed.&nbsp;
+   When the game is first launched after PunkBuster has been installed, PunkBuster will add new files 
+   and folders for later use.
+
+</blockquote>
+
+<a name="#subdirectory">
+<p><img src="tpbsub1.gif" border="0">
+
+<blockquote>
+
+<p>The "pb" folder normally contains the following file types:
+
+<ul>
+<li>Files with a "dll" or "so" extension (example: pbcl.dll) are PunkBuster system files.&nbsp;
+   Removing any or all of these files may cause your PunkBuster system to stop working.&nbsp; Modifying any
+   or all of these files is a violation of our End User License Agreement and permanently terminates
+   your license (and legal ability) to use our software.
+
+<li>Files with a "db" extension are PunkBuster database files.&nbsp; The PunkBuster
+   databases are automatically created and maintained by the PunkBuster software.&nbsp; If you delete
+   one or all of these files, PunkBuster will recreate and re-populate them with information obtained
+   from Master PunkBuster Servers if possible.&nbsp; Modifying any of these files may cause PunkBuster
+   to act in an unexpected manner.
+
+<li>Files with a "dat" extension are PunkBuster data files.&nbsp; They should
+   not be removed or modified.&nbsp; The PunkBuster system will maintain them automatically.
+
+<li>Files with a "log" extension are files into which PunkBuster logs information
+   during the course of using the software.&nbsp; By default, the PunkBuster Client only logs severe
+   error information to a log.&nbsp; The PunkBuster Server logs important activity into log files
+   automatically.
+
+<li>Files with an "htm" extension are special log files that are designed to
+   be viewed by a web browser such as Internet Explorer or Netscape.
+
+<li>Files with a "cfg" extension are configuration files that contain PunkBuster
+   commands and settings.&nbsp; You can create and modify your own configuration files and have them
+   loaded either automatically or manually.&nbsp; Details about PunkBuster commands and settings are 
+   given later in this publication.&nbsp; Two specific "cfg" files: pbsv.cfg and pbsvlog.cfg may be 
+   used and overwritten by the PunkBuster system under some circumstances.&nbsp; Each time PunkBuster starts, 
+   the pbsv.cfg and pbsvuser.cfg configuration files are loaded automatically. Note that 'File Not Found' 
+   messages related to either of these files does not point to a problem or an error. Using 
+   the pb_sv_writecfg command will create a pbsv.cfg and overwrite anything that was previously in that 
+   file. Admins should create (with any text editor) and use pbsvuser.cfg for PB settings and commands 
+   that they don't want to get overwritten with a pb_sv_writecfg command.
+</ul>
+
+<p>PunkBuster also creates subfolders inside the "pb" folder to organize information; 
+   the following is a list of these folders and what they contain:
+
+<ul>
+<li>The "htm" folder contains htm files that are used during PunkBuster's auto-update system.&nbsp;
+   Over time and after many updates, this folder may contain old files that may be deleted to recover 
+   disk space if desired.
+
+<li>The "dll" folder contains various PunkBuster system files obtained during the auto-update process
+   from prior version installations of PunkBuster.&nbsp; As with the "htm" files described above, old files 
+   in this folder may be deleted to recover disk space if desired.
+
+<li>The "svlogs" folder contains PunkBuster Server logs.&nbsp; Log files are named in sequence using an 8 digit number and the ".log" file extension.
+
+<li>The "svss" folder contains screenshots (PNG files) and "helper" HTM files that have been captured from Players connected to the Server - the file pbsvss.htm located in this subdirectory is a sequential index (log) that can be used to quickly and easily view captured screenshots.
+</ul>
+
+</blockquote>
+
+<a name="#interface">
+<p><img src="tpbint1.gif" border="0">
+
+<blockquote>
+
+All interaction with PunkBuster is performed inside the game itself.&nbsp; The PunkBuster Server logs information both to the Game Server Console and PB Server Logs  located in the "svlogs" folder.&nbsp; When you need to issue commands and setting changes to PunkBuster, do so by typing directly into the game's interface / console.&nbsp; Groups of commands and settings can also be placed into “.cfg” files for easy loading.
+
+All PunkBuster Server commands and settings start with the same six characters: "PB_SV_".&nbsp; 
+Specific PunkBuster commands and settings are described in a subsequent section of this publication.&nbsp; 
+PunkBuster doesn't care if commands and settings are typed in lower case, upper case, or in some combination  <code>ENABLE</code>, <code>enable</code>, and <code>EnAbLe</code> are all the same as far as PunkBuster is concerned.&nbsp; Any time the PunkBuster Server needs to display a message, the message will be preceded by the words "PunkBuster Server:".
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#enabling">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tenabling1.gif" border="0">
+
+<blockquote>
+
+There are two ways to enable / disable PunkBuster software.&nbsp; One is by typing commands into the game console.&nbsp; The other way is built into the game's user interface  Only the command line method will be described below, the GUI method is described in our publication <link to player manual> "PunkBuster for Players".&nbsp; Note that when PunkBuster is Disabled, it will ignore commands and setting changes except for the specific command to Enable after which it will begin full and proper operation.
+
+<p>To Enable the PunkBuster Server from the console, type in <code>"PB_SV_ENABLE"</code> without the
+   quotes.&nbsp; To Disable
+   PunkBuster, type <code>"PB_SV_DISABLE"</code>.
+
+<p>NOTICE: PunkBuster cannot be Disabled immediately during the middle of gameplay.&nbsp; Choosing
+   to Disable PunkBuster by any method will set PunkBuster into Disabled mode but
+   that does not take effect until the entire game is restarted.&nbsp; Neither Players nor Server
+   Admins can simply turn PunkBuster off and on during the middle of gameplay.&nbsp; Once PunkBuster
+   Client and/or Server has been Enabled for a gaming session, it becomes Enabled immediately and then 
+   stays Enabled regardless of how many times the Enabled/Disabled mode is toggled.&nbsp; When the 
+   game is exited, the current PunkBuster status is saved and the next time the game is started, 
+   PunkBuster will initialize to the mode in which it was last set, either Enabled or Disabled.
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#updating">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tupdating1.gif" border="0">
+
+<blockquote>
+
+<p>One of the core aspects of the PunkBuster system is the automatic update feature.&nbsp; As new
+   versions of PunkBuster files are made available for download from our Internet-based Master
+   PunkBuster Servers, the PunkBuster software running on Players' and Admin's computers will attempt
+   to retrieve those new versions and perform an automatic "self-update" function in the background
+   without interrupting gameplay.&nbsp; For most users, this occurs automatically and seamlessly.&nbsp;
+   Since PunkBuster Servers require all connected Players to be running identical versions of all
+   PunkBuster files in order to be authenticated for "clean" online play, the automatic update
+   facility inside PunkBuster is an important component of the overall system.&nbsp; PunkBuster will
+   retain older versions in case there is ever a need to connect to a Server that is still running
+   old versions of the PunkBuster software.
+
+<p>All PunkBuster update files are stored in special compressed HTM files and can be opened with
+   any Internet Web Browser.&nbsp; We have designed and implemented a robust method for securely
+   delivering updates from our Master PunkBuster Servers to Regular PunkBuster Servers and then on
+   to computers that have Enabled the PunkBuster Client software.&nbsp; Great care has been taken
+   to design and develop the system such that only authentic PunkBuster files will ever be accepted
+   and used by the PunkBuster System during the auto-update process.
+
+<p>There may be times, however, when it is necessary to manually update a PunkBuster System.&nbsp; For
+   instance, if there is no Internet Access available and multiplayer gameplay is occuring in a LAN
+   environment.&nbsp; Or perhaps, there is a temporary routing problem causing locally running
+   PunkBuster software to not be able to "find" any Master PunkBuster Servers whereby an update can
+   be obtained.&nbsp; There may also be times that the PunkBuster Team offers pre-release beta
+   versions of PunkBuster software for manual download so that it can be tested before broad
+   distribution.&nbsp; For whatever reason that may come up that requires a manual update, we have
+   prepared a separate section, called 'Manual Updates' on the Download page of our website at
+   <a href="http://www.evenbalance.com/index.php?page=download" target="_blank">Even Balance</a>.&nbsp;
+   Since all PunkBuster updates are stored in HTM (web browser compatible) files, there is no need to
+   download archives or to run setup programs in order to update PunkBuster.&nbsp; All that is
+   required is opening our update files in a Web Browser and then performing the "Save As" function
+   from the "File" menu of the Web Browser.&nbsp; The instructions for where to save the HTM files on
+   the local hard drive are displayed on the download page.&nbsp; There are separate sets of files
+   for each Operating System supported (i.e. Windows, Linux, and Macintosh).&nbsp; After the "Save As"
+   has been performed, PunkBuster knows how to update itself using the saved file(s).&nbsp; For some
+   manual updates to complete properly, the game may need to be exited and restarted with PunkBuster
+   Enabled.
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#webtool">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="twebtool1.gif" border="0">
+
+<blockquote>
+
+<p>The PunkBuster WebTool provides the means to remotely administer game servers from any connected computer using a web browser (such as Netscape's Navigator or Microsoft's Internet Explorer). Starting with version 0.987, the PunkBuster Server software includes a mini web server that takes input from Web-based forms and translates that input into game commands. This type of access is similar to using rcon (remote console) commands, except it is done through an html interface and works even from computers that do not have the game or PunkBuster installed. Just about anything that can be done at a server's console or via rcon can be achieved easily by using the WebTool. By default, the WebTool is deactivated. The remainder of this section explains how to activate and use the WebTool.
+
+<p>There are five PunkBuster settings associated with the WebTool: pb_sv_httpPort, pb_sv_httpAddr, pb_sv_httpKey, pb_sv_httpRefresh, and pb_sv_httpMaps. The pb_sv_httpPort setting defaults to a value of 0 which means that the WebTool is deactivated. To activate the WebTool, pb_sv_httpPort must be set to a port number between 1 and 65535 that is not already in use by another program on the computer running the game server. Most web servers use port 80. If you choose not to use 80, then it is probably best to use a number that is at least 1024 or higher to avoid conflicts with other software. Once pb_sv_httpPort is set, PunkBuster will respond saying either that it is listening on the specified port number or that there was some problem trying to listen on the specified port number which means that a different port number should be specified. After setting pb_sv_httpPort, you should test the WebTool functionality, if possible, by launching a web browser on the same computer as the game server and enter this URL: http://127.0.0.1:<port#>. For example, if you chose port number 8000, then you would enter http://127.0.0.1:8000 for the URL. At this point, you should see the opening login screen for the WebTool.
+
+<p>If you wish to be able to use the WebTool from another computer connected via network to the game server (even across the Internet if desired), then the pb_sv_httpAddr setting needs to be set to hold the routable IP Address of the game server. Please note that the WebTool does not use a secure protocol (such as https) for performance reasons. That means that any information you send from your web browser to the WebTool is sent in plain text (including the Key/Password).
+
+<p>The game server's rconpassword is used to allow remote console access to the game server. By default, the rconpassword is also used for WebTool access. However, if you wish to use a different password for WebTool access, then the pb_sv_httpKey should be set accordingly.
+
+<p>One of the screens available inside the WebTool is the Player List screen. This screen shows the list of players and allows Admins to kick and/or ban players easily. By default, this screen automatically refreshes inside the web browser every 30 seconds to show when players leave or when new players join the game. To change the auto-refresh rate, set the pb_sv_httpRefresh setting accordingly. Setting pb_sv_httpRefresh to 999 will disable the auto-refresh feature for the Player List page.
+
+<p>One of the features of the WebTool allows the Admin to change to a new map by choosing the map name from a drop down list in the web browser. By default, the pb_sv_httpMaps setting is empty which means the standard "official" maps are listed in the dropdown. If you wish to customize the map dropdown list, then set the pb_sv_httpMaps setting to hold the maps, separated by a space, that you wish to see in the list. For example, setting pb_sv_httpMaps to "mp_beach mp_ice" means that only those 2 maps will show up in the drop down. Note that you are not limiting the maps available to the server in any way, only what will show up in the WebTool's drop down list.
+
+</blockquote>
+
+<p><img src="twebtool2.gif" border="0">
+
+<center><img src="swebtool2.gif" border="0"></center>
+
+<blockquote>
+
+<p>The Login Screen is where the Web Key is entered for access to the other screens. Remember that the Web Key is the value of the pb_sv_httpKey setting or, if that is blank, the value of the rconpassword game server setting. The four buttons at the bottom of the page take you to the various screens available inside the WebTool provided that the Web Key is entered correctly. These four buttons appear at the bottom of all screens inside the WebTool to make it easy to navigate to the various areas.
+
+</blockquote>
+
+<p><img src="twebtool3.gif" border="0">
+
+<center><img src="swebtool3.gif" border="0"></center>
+
+<blockquote>
+
+<p>The Command Screen is provided so that commonly used game commands can be issued very easily. The name on each button corresponds to the exact name of the game server command that it represents. This is also the screen with the map list drop down to make changing maps very easy. If you wish to issue a specific game command that is not covered by one of the buttons, enter your desired command into the "To console->" field and then click the "To console->" button to send that command to the game server.
+
+</blockquote>
+
+<p><img src="twebtool4.gif" border="0">
+
+<center><img src="swebtool4.gif" border="0"></center>
+
+<blockquote>
+
+<p>The Player List Screen shows all players and their PunkBuster slot numbers along with the same information displayed by the PunkBuster pb_sv_plist command. The bottom of this screen has buttons to allow you to kick, ban or get a screenshot from a specific player. To perform one of these actions, first click the button corresponding to the slot number of the player you wish to reference. That player's information will then automatically be filled into the Slot # and GUID fields at the bottom of the screen. If you plan to kick or ban that player, you may edit the Reason field and if kicking, the Kick Minutes field which defaults to 2 minutes. Press the appropriate button to take action. Note that pressing the pb_sv_getss button will cause the PB Server to request a screenshot from the referenced player. However, screenshots are not viewable through the WebTool interface at this time.
+
+</blockquote>
+
+<p><img src="twebtool5.gif" border="0">
+
+<center><img src="swebtool5.gif" border="0"></center>
+
+<blockquote>
+
+<p>The Game Settings Screen allows common game server settings to be changed easily. Simply change the value of one or more settings and click the "Update" button at the bottom of the screen. The field tags correspond exactly to the game server's cvar names. If you wish to change a setting that is not shown on this page, you can use the "To console->" method found on the Commands Screen (described above).
+
+</blockquote>
+
+<p><img src="twebtool6.gif" border="0">
+
+<center><img src="swebtool6.gif" border="0"></center>
+
+<blockquote>
+
+<p>The PB Settings Screen is used to change PunkBuster settings. Simply change the value of one or more settings and click the "Update" button at the bottom of the screen. Except for the Web Key field, the field tags correspond exactly to the PunkBuster Server's setting names. Please note that the behavior is the same as changing PB Settings from the server console in that they are not saved to the PB config files until/unless you issue a pb_sv_writecfg command after making the change. There is a button for this command on the Commands Screen (described above). If you change a PB Setting and want PunkBuster to "remember" the new value even after the server is exited, then you should issue a pb_sv_writecfg command after making the change. You should also be aware that the WebTool settings can be changed on this page. If you change the Web Key, the Port number and/or the Address values, then that will affect your current WebTool session. In that case, be prepared to retype any new URL into your web browser and start over with the Login process to continue using the WebTool.
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#commsettings">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tcommands1.gif" border="0">
+
+<blockquote>
+
+<p>The easiest way to quickly test that your PunkBuster Server is properly installed, Enabled, and working is to type <code>"PB_SV_VER"</code> into the game console.&nbsp; If PunkBuster is working properly, it will respond by displaying the version number that is currently installed and running.&nbsp; If there is no response, then PunkBuster is either not installed properly or has become corrupted and should be reinstalled.
+
+<p>Some commands are standalone and others may require or accept additional parameters.&nbsp; For example, the command <code>"PB_SV_VER"</code> is standalone, typing in <code>"PB_SV_VER"</code> tells PunkBuster that you would like to know the currently running Version number.&nbsp; The command <code>"PB_SV_LOAD"</code> takes one parameter (a filename), typing in <code>"PB_SV_LOAD ABC.CFG"</code> tells PunkBuster to load the PB  configuration file called <code>"ABC.CFG"</code>.
+
+<p>Many Server Admins remotely control their game servers via the <code>rcon</code> facility built into the game.&nbsp; Most PunkBuster commands will operate the same way whether issued directly into the game console or remotely.&nbsp; A few of the Server commands listed below send queries to Clients and the responses are not directed back to the user when issued remotely via rcon.&nbsp; These commands are denoted by a <code>{rcon limited}</code> designation after the command name in the descriptions below.
+
+<p>Most Server Admins will not use the <code>PB_SV_LOAD</code> command, but rather will use the game-specific exec command so that  configuration files can be loaded that have both Game and PunkBuster commands and settings changes.&nbsp;  Configuration files loaded by the <code>PB_SV_LOAD</code> command may contain only  PunkBuster related commands and settings.
+
+<p>PunkBuster settings, sometimes also called variables, hold numbers or textual information that PunkBuster uses while it is operating.&nbsp; Changing PunkBuster settings will affect the way PunkBuster runs in specific ways.&nbsp; All PunkBuster settings start out with default values that are the recommended values for most users.&nbsp; To find out the current value of a setting, simply type in the name of the setting  by itself.&nbsp; For example, typing <code>"PB_SV_AUTOSS"</code> will cause PunkBuster to display the current value.&nbsp; Also displayed is the allowable range that the value can contain.&nbsp; This particular setting can be set either to 1 or 0..&nbsp; To set it to 1, type in <code>"PB_SV_AUTOSS 1"</code>, PunkBuster will then respond by showing the setting name along with its new value.&nbsp; Trying to set a PunkBuster setting outside of its allowable range will cause PunkBuster to give the setting the closest allowable value to what was originally specified.
+
+<p>Listed below (in alphabetical order) is a list of PunkBuster Commands and Settings along with a general description and usage instructions where necessary.
+
+</blockquote>
+
+<a name="#commands">
+<p><img src="tcommands2.gif" border="0">
+
+<blockquote>
+
+<p><b>PB_SV_AutoUpdBan [0/1]</b><br>
+Set to 1 (defaults to 0) if you want PB to automatically update the permanent ban file (pbbans.dat) after each change to the banlist in memory
+
+<p><b>PB_SV_BadName [grace_seconds] [text_filter]</b><br>
+Adds a bad name to the list of bad names for the server to disallow in player names
+
+<p><b>PB_SV_BadNameDel [slot #]</b><br>
+Deletes a bad name from the list of bad names
+
+<p><b>PB_SV_BadNameList</b><br>
+Displays the current bad name list for the Game Server; see the section dealing with the Player Name Management Facility
+
+<p><b>PB_SV_Ban [name or slot #] [displayed_reason] | [optional_private_reason]</b><br>
+Removes a player from the game and permanently bans that player from the server based on the player's guid (based on the cdkey); the ban is logged and also written to the pbbans.dat file in the pb folder
+
+<p><b>PB_SV_BanEmpty</b><br>
+Empties the current ban list stored in memory
+
+<p><b>PB_SV_BanGuid [guid] [player_name] [IP_Address] [reason]</b><br>
+Adds a guid directly to PB's permanent ban list; if the player_name or IP_Address are not known, we recommend using "???"
+
+<p><b>PB_SV_BanList [optional_search_text]</b><br>
+Displays the list of bans in the console, including kicks with a temporary ban; if the <code>[optional_search_text]</code> parameter is specified, then only bans/kicks that include the search text are listed (useful for searching for a specific name / guid).
+
+<p><b>PB_SV_BanLoad [optional filename]</b><br>
+Loads a PB Ban List from the specified file; if no filename specified, then pbbans.dat is loaded
+
+<p><b>PB_SV_BindSrch [search_text] [player_name_or_slot#]</b> <code>{rcon limited}</code><br>
+Sends a request to all applicable connected players asking for a report on which local player key bindings contain the specified <code>[search_text]</code>; to specify a player name or substring (as opposed to slot #), surround the text with double-quote marks
+
+<p><b>PB_SV_Cvar [Cvar_name] [IN/OUT/INCLUDE/EXCLUDE] [Param1] [optional_Param2]</b><br>
+Adds an automatic cvar check to the list of cvars for the server to check for during gameplay
+
+<p><b>PB_SV_CvarChanged [player_name_or_slot#]</b> <code>{rcon limited}</code><br>
+Sends a request to all applicable connected players asking for a list of which local player cvar values have been changed from their original default value; to specify a player name or substring (as opposed to slot #), surround the text with double-quote marks
+
+<p><b>PB_SV_CvarDel [Cvar slot #]</b><br>
+Deletes a Cvar range check from the list of checks stored in memory; the Cvar slot # can be obtained via the pb_sv_cvarlist command
+
+<p><b>PB_SV_CvarEmpty</b><br>
+Empties the list of Cvar range checks in memory
+
+<p><b>PB_SV_CvarList</b><br>
+Displays the allowed cvar ranges for all cvars that the Game Server is monitoring; see the section dealing with the Variable Monitoring Facility
+
+<p><b>PB_SV_CvarSrch [search_text] [player_name_or_slot#]</b> <code>{rcon limited}</code><br>
+Sends a request to all applicable connected players asking for a list of which local player cvar values contain the specified <code>[search_text]</code>; to specify a player name or substring (as opposed to slot #), surround the text with double-quote marks
+
+<p><b>PB_SV_CvarUser [player_name_or_slot#]</b> <code>{rcon limited}</code><br>
+Sends a request to all applicable connected players asking for a list of which local player cvars were created by the user (as opposed to being part of the game itself); to specify a player name or substring (as opposed to slot #), surround the text with double-quote marks
+
+<p><b>PB_SV_CvarVal [Variable_Name] [player_name_or_slot#]</b> <code>{rcon limited}</code><br>
+Sends a request to all applicable connected players asking for the value of the specified variable (cvar); to specify a player name or substring (as opposed to slot #), surround the text with double-quote marks
+
+<p><b>PB_SV_Disable</b><br>
+Disables the PunkBuster Server Software - the disabling does not take effect until the game server is exited and restarted
+
+<p><b>PB_SV_Enable</b><br>
+Enables the PunkBuster Server Software
+
+<p><b>PB_SV_GetSs [player_name_or_slot#]</b><br>
+Sends a request to all applicable connected players asking for a screen shot to be captured and sent to the PB Server; to specify a player name or substring (as opposed to slot #), surround the text with double-quote marks
+
+<p><b>PB_SV_Kick [name or slot #] [minutes] [displayed_reason] | [optional_private_reason]</b><br>
+Removes a player from the game and won't let the player rejoin until specified [minutes] has passed or until the server is restarted, whichever comes first - kicks are not written to the pbbans.dat file but they are logged and will show up in the output from the pb_sv_banlist command
+
+<p><b>PB_SV_Load [File Name]</b><br>
+Loads the specified PunkBuster configuration  file which can contain PunkBuster commands and/or setting changes
+
+<p><b>PB_SV_PList</b><br>
+Displays a list of connected players and their current status
+
+<p><b>PB_SV_Power [power rating] [slot #]</b><br>
+Adds player in specified slot # to the locally stored PB Player Power database with the specified power rating.
+
+<p><b>PB_SV_PowerList [filter]</b><br>
+Displays a list of Power Players in the database; if filter is specified, then only entries where the filter is either in the guid and/or name fields are displayed
+
+<p><b>PB_SV_PowerPoints [power slot #] [points]</b><br>
+Changes the number of Power Points assigned to a Power Player in the database; use the PB_SV_PowerList command to get the power slot #
+
+<p><b>PB_SV_ReBan [slot #]</b><br>
+Rebans a player who has been mistakenly Unbanned with the pb_sv_unban command; use pb_sv_updbanfile to update the permanent ban file after using this command
+
+<p><b>PB_SV_Task [X] [Y] [command]</b><br>
+Adds a task to PB's Task List; The Task will be executed X seconds after entry and every Y seconds thereafter; use -1 for Y if a one-time task is desired; this can be used to execute game server commands as well as PB commands
+
+<p><b>PB_SV_TaskDel [task slot #]</b><br>
+Removes the task from PB's Task List that corresponds to the specified task slot #
+
+<p><b>PB_SV_TList</b><br>
+Displays a list of PB Tasks along with a task slot # for each task
+
+<p><b>PB_SV_UnBan [slot #]</b><br>
+Unbans a player from the ban list stored in memory; use pb_sv_updbanfile to update the permanent ban file after using this command
+
+<p><b>PB_SV_UnBanGuid [guid]</b><br>
+Unbans a guid from the ban list stored in memory; use pb_sv_updbanfile to update the permanent ban file after using this command
+
+<p><b>PB_SV_Update</b><br>
+Forces the PB Server to attempt a PB software update even if no players are currently connected
+
+<p><b>PB_SV_UpdBanFile [optional filename]</b><br>
+Updates the specified ban file (pbbans.dat is used if none specified) with regard to recent unbans/rebans
+
+<p><b>PB_SV_Ver</b><br>
+Displays the currently running version of the PunkBuster Server software
+
+<p><b>PB_SV_WriteCfg</b><br>
+Writes the current values of the PunkBuster Server settings to the local hard drive (creating or overwriting a file called pbsv.cfg) in such a way that they will be loaded automatically the next time the PunkBuster Server starts; server admins who wish to manage multiple config files for different situations will usually not use this command at all
+
+</blockquote>
+
+<a name="#settings">
+<p><img src="tsettings1.gif" border="0">
+
+<blockquote>
+
+<p><b>PB_SV_AutoSs [0/1]</b><br>
+Set to 1 (default is 0) if you want the PB server to regularly retrieve screen shots from connected players
+
+<p><b>PB_SV_AutoSsFrom [Seconds]</b><br>
+Minimum number of seconds (default is 60) PB will wait before requesting a screen shot after the previous request from each player
+
+<p><b>PB_SV_AutoSsTo [Seconds]</b><br>
+Maximum number of seconds (default is 1200 = 20 minutes) PB will wait before requesting a screen shot after the previous request from each player
+
+<p><b>PB_SV_CQC [0/1]</b><br>
+CQC means Client Query Capability - setting this to 0 (default is 1) means that connected players cannot use PB to check the value of game server cvars (we recommend leaving this set to the default of 1 to promote goodwill); NOTE that PB doesn't let players see the value of any server-side cvars that include the text "password"
+
+<p><b>PB_SV_CvarChangedPulse [Number]</b><br>
+The number of minutes (default is 99 which means disabled) between automatic sends of the CVARCHANGED command described in the command section above
+
+<p><b>PB_SV_CvarFreq [Number]</b><br>
+The number of times per minute (default is 6) that each player has one cvar value checked against the current list of cvar ranges on this server
+
+<p><b>PB_SV_CvarLogging [1/2/3]</b><br>
+Determines the target destination of log output related to player cvar checks; The value of 1 (default) specifies the server console and normal log file, the value of 2 specifies separate log files in the "svlogs" folder with the var file extension, and the value of 3 specifies both
+
+<p><b>PB_SV_CvarUserPulse [Number]</b><br>
+The number of minutes (default is 99 which means disabled) between automatic sends of the <code>CVARUSER</code> command described in the command section above
+
+<p><b>PB_SV_CvarWalk [Number]</b><br>
+The default setting of 0 tells PunkBuster to simply log lists of cvar names returned by the <code>CVARSRCH</code>, <code>CVARUSER</code> and <code>CVARCHANGED</code> commands so that the Admin would have to manually query the individual values if desired; a non-zero setting tells PunkBuster to "walk" through each cvar returned in such a list automatically and log the values of each cvar - the higher the number for this setting, the more cvars PunkBuster walks through during each processing cycle
+
+<p><b>PB_SV_DupNameGrace [Seconds]</b><br>
+Set to the number of seconds (default is 0 which means duplicate name kicking is disabled) of grace period a player should be granted to change names before being kicked for having the same (duplicate) name as another player (first come first served) on the server
+
+<p><b>PB_SV_ExtChar [0/1]</b><br>
+The default setting of 0 tells PunkBuster to disallow extended ASCII Characters in player names; for the purposes of this command, characters that cannot be easily entered with simple keystrokes are considered extended
+
+<p><b>PB_SV_HttpAddr [IP Address]</b><br>
+The IP Address of the computer running the PunkBuster WebTool; if this setting is left empty ("" which is the default), then the WebTool will only operate properly when used with a web browser running on the same machine as PunkBuster itself (i.e. using 127.0.0.1 as the IP address)
+
+<p><b>PB_SV_HttpKey [Key (password) for WebTool use]</b><br>
+The Key or Password used by the WebTool to limit access to its features; if this setting is left empty ("" which is the default), then the game server's rconpassword will be used instead; if both are empty, then the WebTool will not be usable at all
+
+<p><b>PB_SV_HttpMaps [List of Maps]</b><br>
+By default, this setting is empty which means that the standard official maps will be displayed in the 'change map' dropdown list inside the WebTool; if you wish to customize the entries in the dropdown, then use this setting to store the list of maps (each separated by a space)
+
+<p><b>PB_SV_HttpPort [Port Number]</b><br>
+The TCP port number used by the WebTool's http server; this setting defaults to 0 which means the WebTool is deactivated
+
+<p><b>PB_SV_HttpRefresh [Number]</b><br>
+The number of seconds between auto-refreshes of the Player List screen inside the WebTool; setting this to 999 means that the page will not auto-refresh at all
+
+<p><b>PB_SV_KickLen [Minutes]</b><br>
+The number of minutes (default is 2) a player will be kept from being able to rejoin after getting kicked by PunkBuster
+
+<p><b>PB_SV_LogAddr [Address / Internet Hostname]</b><br>
+Holds the address of the machine to which remote logging is sent (default is empty meaning the feature
+is not used)
+
+<p><b>PB_SV_LogCeiling [Number]</b><br>
+The highest serial number (default is 1000) that PunkBuster will use in numbering its log files before starting over at 1
+
+<p><b>PB_SV_LogNext [Number]</b><br>
+The next serial number that PB will use to name a PB log file; this setting is automatically maintained by PunkBuster and is incremented after each map change by the Game Server as PB opens a new log file
+
+<p><b>PB_SV_LogPort [Port #]</b><br>
+Holds the listen port of the machine to which remote logging is sent (default is 0 meaning the feature
+is not used)
+
+<p><b>PB_SV_LogPw [Password]</b><br>
+Holds the password required to send logging output to a listening remote logging machine
+
+<p><b>PB_SV_LogSync [0/1]</b><br>
+When set to 1 (default is 0), PB will name Game log files in accordance with PB log files using the same serial number system; Game log files will still be stored in the same location inside the game directory either way, but will have the same filename as the corresponding PB log file and both will be closed at the end of each map and a new log file will be opened
+
+<p><b>PB_SV_LogUser [Username]</b><br>
+Holds the username required to send logging output to a listening remote logging machine
+
+<p><b>PB_SV_MaxConDls [Number]</b><br>
+The maximum number (default is 3) of PB updates that PB will attempt to download at the same time
+
+<p><b>PB_SV_MaxDlRate [KB/sec]</b><br>
+The (roughly) maximum bandwidth (default is 1 KB/sec) requested per file for PB update downloads
+
+<p><b>PB_SV_MsgPrefix [New Prefix]</b><br>
+Holds the text that the PunkBuster Server displays in front of every output line displayed; the default is "<code>^3PunkBuster Server</code>" (note the <code>^3</code> means output in the color GOLD); If the game server is running in non-dedicated (listen) mode, all PunkBuster Server output goes to both the top of the playing screen and to the console by default; To prevent PunkBuster Server messages from being displayed on the playing screen, insert the text <code>[skipnotify]</code> before any desired message prefix text.&nbsp; For example, the command <code>pb_sv_msgprefix [skipnotify]^3PunkBuster Server</code> will cause all PunkBuster Server output to go only to the console and not to the playing screen.
+
+<p><b>PB_SV_PowerDef [power points]</b><br>
+Holds the default number of Player Power points assigned to players who are not in the locally stored PB Player Power database
+
+<p><b>PB_SV_PowerKickLen [minutes]</b><br>
+The number of minutes (default is 5) a player will be kept from being able to rejoin after being removed via the PB Player Power facility
+
+<p><b>PB_SV_PowerMin [power points]</b><br>
+A player is removed from the server when the number of power points applied against him/her is equal to or greater than the value of this setting (default is 10)
+
+<p><b>PB_SV_ScoreKick [low_negative_score]</b><br>
+Players whose score drops below this setting will be kicked from the server; the default of 0 means disabled; the allowable range is -1 to -20
+
+<p><b>PB_SV_Sleep [Period]</b><br>
+Holds the period of time (milliseconds) that the PunkBuster Server "sleeps" between processing cycles; lower numbers will cause PunkBuster to process more times each second which also may have the effect of marginally increasing the bandwidth used by PunkBuster
+
+<p><b>PB_SV_Specname [text]</b><br>
+If a special spectator client "bot" is used on the server, this setting should hold the player name corresponding to that client so that the PB Server will know this is not a real player; if the player with this name ever has a non-zero score, the "special" status is lost
+
+<p><b>PB_SV_SsCeiling [Number]</b><br>
+The highest serial number (default is 100) that PB will use in numbering Screenshot (PNG) files obtained from players before starting over at the <code>PB_SV_SsFloor</code> value
+
+<p><b>PB_SV_SsCmd [Filename]</b><br>
+The name of the script file (default is "" empty which means "not used") that PB calls after each screen shot PNG image file is received; this can be used by admins to copy or otherwise process screenshot files that are obtained automatically during gameplay
+
+<p><b>PB_SV_SsDelay [Seconds]</b><br>
+When this is non-zero (default is 0), then each PB client will wait a random number of seconds up to the value of this setting after receiving the request before actually capturing a screen image for sending back to the server
+
+<p><b>PB_SV_SsFloor [Number]</b><br>
+The lowest serial number (default is 1) that PB will use in numbering Screenshot (PNG) files obtained from players
+
+<p><b>PB_SV_SsHeight [Pixels]</b><br>
+The requested height (default is 240 pixels) of images captured by PunkBuster Clients for sending to the PB Server
+
+<p><b>PB_SV_SsNext [Number]</b><br>
+The next serial number that PB will use to name a PNG screen shot image file
+
+<p><b>PB_SV_SsPath [Path]</b><br>
+If specified (default is "" empty), PB will write captured screen shot images obtained from connected players to this alternate location, this can be a network share or some other location where you would prefer to place screen shot images and the "helper" htm files that go with them
+
+<p><b>PB_SV_SsSRate [Number]</b><br>
+The sample rate (default is 1) used for capturing screen shots, specifies how many pixels get skipped in the processing of the image to keep file sizes down; if set to 2, then only every 2nd pixel is taken (in both horizontal and vertical directions); if set to 4, then only every 4th pixel is taken
+
+<p><b>PB_SV_SsWidth [Pixels]</b><br>
+The requested width (default is 320 pixels) of images captured by PunkBuster Clients for sending to the PB Server
+
+<p><b>PB_SV_SsXPct [Percentage]</b><br>
+The percentage across the screen (default is 50%) where the center of the requested screenshot should be captured from
+
+<p><b>PB_SV_SsYPct [Percentage]</b><br>
+The percentage down the screen (default is 50%) where the center of the requested screenshot should be captured from
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#badname">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tplayer1.gif" border="0">
+
+<blockquote>
+
+<p>Some Server Admins wish to try to limit profanity / offensive language on their game servers.&nbsp; This is an individual preference issue.&nbsp; For Admins who wish to prevent players from using certain offensive text in their playing names, PunkBuster includes the Player Name Management Facility also known as the BadName Facility.
+
+<p>By default, PunkBuster does not do any checking for BadNames.&nbsp; If you wish to construct a list of offensive text filters in PunkBuster so that players will not be able to wear names containing the offensive text, use the BadName command.&nbsp; The format of the BadName command is as follows:
+
+<p><code>PB_SV_BADNAME [grace_period] [filtered_text]</code>
+
+<p>You can fill up a configuration  file with nothing but these types of statements if desired and then issue a <code>PB_SV_LOAD</code> command either manually or inside your pbsv.cfg file to have the whole list executed easily at one time.&nbsp; If prefered, you can also type them into the console and do a <code>PB_SV_WRITECFG</code> to have the whole list written, along with your other current PB settings, to the pbsv.cfg file which is automatically loaded every time PunkBuster starts.
+
+<p>If PB detects that a player has a name that includes the exact <code>[filtered_text]</code> from any BadName entry (case insensitive), then PunkBuster will send a warning message to the player that the playing name is not allowed on this server and that the player should change the name.&nbsp; If the name is not changed to an acceptable name within the number of seconds specified by <code>[grace_period]</code> for that text filter, then the player is removed from the game.&nbsp; Note that setting <code>[grace_period]</code> to 0 has the effect of immediately removing a player before any warning message has time to display.
+
+<p>Note that PB strips player names of color codes before searching for <code>[filtered_text]</code>.
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#monitoring">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tmonitoring1.gif" border="0">
+
+<blockquote>
+
+<p>PunkBuster provides the ability for Server Admins to specify a list of acceptable player cvar value ranges while playing on the Game Server.&nbsp; When each player connects to a PB-Enabled Server, the PB Client will download the list of acceptable cvar ranges from the PB Server and will check all of the player's cvars for compliance.&nbsp; The player is warned about any cvars that are unacceptable to the Game Server.&nbsp; The player then will have a few seconds to make any necessary corrections before the PB Server will begin methodically and regularly checking that player's cvars against the list of acceptable ranges.&nbsp; If a player is found to have a cvar that is outside the acceptable range for that cvar, then that player will be removed from the game immediately.
+
+<p>To add a cvar check to your PB Server, use the <code>PB_SV_CVAR</code> command.&nbsp; There are four different types of cvar checks that can take place: <code>IN</code>, <code>OUT</code>, <code>INCLUDE</code>, and <code>EXCLUDE</code>.&nbsp; Each is explained below along with examples and the format of the <code>PB_SV_CVAR</code> usage required to properly add that type of check to the PB Server's list.&nbsp; As with any other PB Command or Setting, cvar checks can be stored in configuration files and loaded either automatically during startup or upon demand during gameplay.&nbsp; In the case of cvar checks, we recommend adding new entries in such a way that they take effect the next time the server is started rather than adding them during gameplay.
+
+<p>Note that once a cvar check has been added, it cannot be removed or changed without restarting the PB server.&nbsp; If a subsequent entry is made with the same cvar name, it is added to the list without affecting the prior entry.&nbsp; Also note that checking for non-existent cvars will return empty strings (which also evaluate to the value of 0).
+
+<p><code>PB_SV_CVAR [cvar_name] IN [from_value] [optional_to_value]</code><br>
+If you wish to require that a particular cvar always equals a certain value or falls within a specified range of values, use the "IN" type.&nbsp; For example, <code>"PB_SV_CVAR handicap IN 10"</code> means that each player's handicap cvar must always equal 10 on your game server.&nbsp; Issuing <code>"PB_SV_CVAR handicap IN 5 15"</code> means that handicap must always fall inside the 5 to 15 range (inclusive).
+
+<p><code>PB_SV_CVAR [cvar_name] OUT [from_value] [optional_to_value]</code><br>
+If you wish to require that a particular cvar never equals a certain value or falls within a specified range of values, use the "OUT" type.&nbsp; For example, <code>"PB_SV_CVAR handicap OUT 0"</code> means that each player's handicap cvar must never equal 0 on your game server.&nbsp; Issuing <code>"PB_SV_CVAR handicap OUT 11 99"</code> means that handicap must never fall inside the 11 to 99 range (inclusive).
+
+<p><code>PB_SV_CVAR [cvar_name] INCLUDE [text]</code><br>
+If you wish to require that a particular cvar always includes the specified <code>[text]</code> inside its value, use the "INCLUDE" type.&nbsp; For example, <code>"PB_SV_CVAR r_drawbuffer INCLUDE gl_back"</code> means that each player's r_drawbuffer cvar must always have the text "gl_back" somewhere in the value.
+
+<p><code>PB_SV_CVAR [cvar_name] EXCLUDE [text]</code><br>
+If you wish to require that a particular cvar never includes the specified <code>[text]</code> inside its value, use the "EXCLUDE" type.&nbsp; For example, <code>"PB_SV_CVAR name EXCLUDE ^"</code> means that each player's name cvar must never have the text "^" somewhere in the value (note: the ^ symbol is used to change text colors so using the example would mean that no one could put fancy colors in their playing name on your server without getting kicked once detected by PunkBuster).
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#advmonitoring">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tadvanced1.gif" border="0">
+
+<blockquote>
+
+<p>In addition to the Variable Monitoring Facility described in the previous section, PunkBuster also includes several advanced tools that Admins can use when desired.&nbsp; Five such commands are <code>PB_SV_BINDSRCH</code>, <code>PB_SV_CVARSRCH</code>, <code>PB_SV_CVARVAL</code>, <code>PB_SV_CVARUSER</code>, and <code>PB_SV_CVARCHANGED</code>.&nbsp; The first three take two parameters: <code>[text] [player]</code> and the others take one: <code>[player]</code>.&nbsp; If the <code>[player]</code> parameter is not specified for any of these commands, then PB will direct the command at all currently connected players.&nbsp; There are 2 ways to specify specific players: by slot # or by name substrings.&nbsp; To get player slot numbers, use the <code>PB_SV_PLIST</code> command.&nbsp; Each player's slot # is in the first column of the resulting display.&nbsp; If you wish to specify name substrings, be sure to surround the search text with double quotes.&nbsp; For example, <code>PB_SV_CVARVAL handicap "wolf"</code> means to find the value of the handicap cvar for all players who have the text "wolf" in their playing name.
+
+<p>The <code>PB_SV_BINDSRCH</code> command searches through all of the player's key bindings looking for the specified <code>[text]</code> and reports back matching keys and the full binding attached to each matching key.&nbsp; This is useful for examining the key bindings of a player to see if that player is trying to get around the cvar checks by setting a bind to set a cvar value to an unacceptable value and then quickly set it back to acceptable after some other processing has occured.&nbsp; For example, use <code>"PB_SV_BINDSRCH back"</code> to get a list of all keys that have the text "back" in the key binding from your connected players.
+
+<p>The <code>PB_SV_CVARSRCH</code> command is similar to the BINDSRCH command described above.&nbsp; However, instead of searching key bindings, it searches through the values of all cvars defined in the player's system, including player-defined cvars.&nbsp; Since cvars can be used to execute commands by players, this type of search is useful to find out if a player has set up a cvar as an alias to execute in order to set other cvar values outside of acceptable ranges.&nbsp; When this command is issued, the full list of player cvar names that contain the search text is returned (the values of each cvar may be displayed/logged either manually with the <code>PB_SV_CVARVAL</code> command or automatically by setting the <code>PB_SV_CVARWALK</code> setting).
+
+<p>The <code>PB_SV_CVARVAL</code> command can be used to check the exact value of any player cvar at any time.&nbsp; For example, use <code>"PB_SV_CVARVAL cg_drawallweaps"</code> to find the value of the <code>cg_drawallweaps</code> cvar for all connected players.&nbsp; Use <code>"PB_SV_CVARVAL cg_drawallweaps 1"</code> to find the value only from the player in slot #1.
+
+<p>The <code>PB_SV_CVARUSER</code> command requests a list of cvars that are user-created.
+
+<p>The <code>PB_SV_CVARCHANGED</code> command requests a list of cvars that are not currently set to their default value.
+
+<p>There are also a few advanced settings that can be used to automate routine logging of cvar information supplied by using the above-listed commands:
+
+<p>The <code>PB_SV_CVARLOGGING</code> setting determines how and where player cvar information is displayed and/or logged to a file for later viewing.&nbsp; A busy server with several players can generate lots of cvar-related information within a relatively short period of time if the PB Admin decides to take advantage of some of the above-listed features.&nbsp; If the <code>PB_SV_CVARLOGGING</code> setting is left at the default value of 1, then all cvar-related information is treated just like other events and is displayed in the server console as well as logged to the current PunkBuster log file.&nbsp; To redirect cvar-related logging to a separate (var) file, set <code>PB_SV_CVARLOGGING</code> to 2.&nbsp; In this case, PunkBuster actually maintains two separate log files for each map, one with the <code>.log</code> extension (normal logs) and one with the <code>.var</code> extension (cvar logs).&nbsp; Both files for a given map will have the same filename based on the sequential log file number, only the file extensions are different (for example, 00000001.log and 00000001.var).&nbsp; Setting <code>PB_SV_CVARLOGGING</code> to 3 has the effect of logging cvar-related information in both manners described above for values of 1 and 2.
+
+<p>The <code>PB_SV_CVARUSER</code> and <code>PB_SV_CVARCHANGED</code> commands described above are designed to catch players who have figured out how to exploit the game using unpublished combinations of settings.&nbsp; If an Admin is suspicious of a certain player who seems to be able to do things that are not a normal part of the game, that player's cvars can be examined for any unusual combinations that may bring to light the source of an exploit.&nbsp; In some cases, Admins (or Leagues) may want to routinely and automatically log all such information for all players and then go back later to examine the logs rather than try to check players in real time while they are playing.&nbsp; To automate the sending of <code>PB_SV_CVARUSER</code> and <code>PB_SV_CVARCHANGED</code> commands to all players, use the <code>PB_SV_CVARUSERPULSE</code> and <code>PB_SV_CVARCHANGEDPULSE</code> settings.&nbsp; For example, set <code>PB_SV_CVARUSERPULSE</code> to 15 in order to have the PunkBuster Server automatically send a <code>PB_SV_CVARUSER</code> command to each player once every 15 minutes (staggered randomly).&nbsp; Both PULSE settings default to 99 which means disabled.&nbsp; Setting either or both to a number up to 98 activates the automatic feature.
+
+<p>Another advanced setting that is designed to be used in combination with the PULSE settings mentioned above is called the <code>PB_SV_CVARWALK</code> setting.&nbsp; This setting normally defaults to 0 which means disabled.&nbsp; Setting it to a non-zero number causes PunkBuster to automatically "walk" through all cvars returned in a list (such as from a <code>PB_SV_CVARUSER</code> command) and query the actual current value of each player cvar in the list.
+
+<p>Listed below is an example set of settings that would cause the PunkBuster Server to log all user-created and changed cvars along with their values to a separate log file with the <code>.var</code> file extension every 15 minutes (per player) during gameplay:
+
+<p><code>
+PB_SV_CvarLogging 2<br>
+PB_SV_CvarWalk 4<br>
+PB_SV_CvarUserPulse 15<br>
+PB_SV_CvarChangedPulse 15<br>
+</code></p>
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#screenshots">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tscreen1.gif" border="0">
+
+<blockquote>
+
+<p>PunkBuster allows Server Admins to request and retrieve actual screenshot images being displayed on the gaming monitor of players currently connected to the game server.&nbsp; It is very easy to request a screenshot from one or more players and also to set up automatic screenshot capturing.&nbsp; Several advanced features are available for Admins who want to tweak their systems.&nbsp; The defaults are fine for most Admins and are a good place to start when getting a feel for how the Screen Capture Facility works.
+
+<p>There are two ways to capture screen shots: Manually and Automatically.&nbsp; Some Admins will do both types.&nbsp; To Manually request a screenshot from all connected players, simply type <code>"PB_SV_GETSS"</code> into the Game Server console and after a few seconds, you will start seeing messages about where newly retrieved screenshots were written to your hard drive and what their filenames are.&nbsp; PB names screenshot image files using incrementing sequential serial numbers and they always have the PNG extension.&nbsp; PNG graphic files are similar to GIF and JPG files - they combine the best of both worlds with respect to the type of images found in most computer games.&nbsp; Along with each screenshot image (PNG) file, PunkBuster also writes a "helper" HTM file with the same filename so that you can use any web browser, such as Netscape or IE, to easily view your captured screenshots.&nbsp; Furthermore, all screenshot requests are logged to one specific HTM file called pbsvss.htm so that the list is made available on one scrolling screen as an index for quick and easy viewing.
+
+<p>If you wish to take a manual screenshot of only one or a few connected players, you can specify either the player's slot number directly or you can specify a text substring and PB will request screenshots from all players whose names contain the specified search text.&nbsp; To find the slot # of a specific player, type <code>PB_SV_PLIST</code> into the console.&nbsp; Column one contains the slot # for each connected player in the list.&nbsp; To request screenshots from all players with the text "ABC" in their name, type <code>PB_SV_GETSS "ABC"</code> (note the quotes are necessary when specifying name substrings).
+
+<p>To set up Automatic Screenshot Capturing, set the <code>PB_SV_AUTOSS</code> setting to 1 (the default is 0).&nbsp; Then you may want to change the values of the <code>PB_SV_AUTOSSFROM</code> and <code>PB_SV_AUTOSSTO</code> settings to specify how often PunkBuster will request screenshots from each connected player.&nbsp; Both of these settings are measured in seconds and the defaults are 60 and 1200 respectively which means that the PunkBuster Server will request a new screenshot randomly anywhere from 1 to 20 minutes after each previous request for each connected player.
+
+<p>Note that regardless of the combination of manual and automatic screenshot requests submitted during gameplay, the PunkBuster system limits screen shots in two ways.&nbsp; First, each individual screenshot is limited to 82,000 pixels  in an effort to keep image file sizes and transfer bandwidth requirements down.&nbsp; If you set your parameters (described below) to request images that contain more than 82,000 pixels, then PunkBuster will automatically reduce the image size until the actual capture fits within the limitation.&nbsp; Also, PunkBuster will not allow more than 3 screenshots to be requested from each player within any 10 minute period, nor allow a screenshot to be requested within 30 seconds of the previous request.&nbsp; The PB_SV_PLIST command used to display information about connected players has a column called "RecentSS" which shows the number of requests for each player within the last 10 minutes.
+
+<p>Also, Admins should keep in mind that PunkBuster will not take a screenshot from a player who has minimized his local game or who has an application active other than the game itself.&nbsp; In those cases, an empty black screenshot image is sent with text at the bottom explaining why the Capture failed.&nbsp; Also, there are a few video display setups that cannot be correctly captured at this time.&nbsp; These setups also do not allow the game itself to take screenshots using the built-in non-PunkBuster method.
+
+<p>The following settings can be used to customize the Screen Capture Facility:
+
+<p>PB_SV_SSWIDTH and PB_SV_SSHEIGHT are used to request a specific size image in pixels.&nbsp; The default is 320 x 240.&nbsp; If a size is requested that is larger than the actual resolution on a player's system, then PB will automatically reduce the appropriate parameter to match the size of the resolution.&nbsp; For example, if a screenshot of 800x600 resolution is requested from a player running the game in 640x480 resolution, then PB will take the image at 640x480 resolution automatically.
+
+<p>PB_SV_XPCT and PB_SV_YPCT are used to specify where on the full playing screen that the capture is to be centered.&nbsp; The default is 50 and 50 so that the capture comes from the center of the playing screen.&nbsp; Using lower numbers moves the captured area toward the left (in the case of XPCT) and upper (in the case of YPCT) portions of the screen and using higher numbers moves the area towards the right and lower portions of the screen respectively.&nbsp; If XPCT and/or YPCT are set to -1, then a random percentage between 0 and 100 will be used for each individual capture request - this has the effect of capturing different (randomized) portions of the playing screen each time a capture is taken.
+
+<p>PB_SV_SSSRATE sets the sample rate for the capture.&nbsp; The Sample Rate can be set to take less pixels from a larger area of the screen to, in effect, compact a larger picture into a smaller size by simply skipping pixels.&nbsp; Sample Rates of 1, 2 and 4 are available.&nbsp; Using a Sample Rate of 2 will reduce image file sizes to about one fourth of normal (Sample Rate 1) and using 4 will reduce to about one sixteenth.&nbsp; The reduction in file size does affect the clarity of the image.&nbsp; It is always best to use Sample Rate of 1 unless you desire to capture large portions of the playing screen and don't mind losing some clarity in the resulting image.&nbsp; Even with the 82,000 pixel limit, it is possible to capture images at 1280x1024 using a sample rate of 4 for the relatively few players who play in very high resolutions.
+
+<p>PB_SV_SSDELAY causes the PB Client to wait a random number of seconds (up to 60) after receiving the capture request before actually capturing the image.
+
+<p>PB_SV_SSPATH can be configured to hold an alternate location where captured screenshots are to be written.&nbsp; This can be a network share if desired.&nbsp; The default is "" (empty) which means the pb/svss subfolder holds captured screen shots and related support files.
+
+<p>PB_SV_SSFLOOR, PB_SV_SSCEILING, and PB_SV_SSNEXT deal with the way captured screenshot images are named as they are saved to files at the PB server.&nbsp; The PB_SV_SSNEXT setting holds the serial number that PB will use for the next captured filename - for example if PB_SV_SSNEXT is 250, then the next captured image will have a filename of pb000250.png (and it's "helper" file will be named pb000250.htm).&nbsp; The PB_SV_SSNEXT setting is incremented and maintained automatically by the PB system but can be set manually if desired.&nbsp; The FLOOR and CEILING settings specify the from and to range for the screenshot filenames captured by this server.&nbsp; Using the PB_SV_SSPATH command mentioned above, Admins who run multiple servers may want to have all PB Servers send captured screenshots to a central location.&nbsp; The FLOOR and CEILING settings allow the admin to give each PB Server its own unique range of filenames to use so that there is never any overlap in the central archive.
+
+<p>PB_SV_SSCMD holds the name of a local script (batch) file that PB will execute automatically after each screen shot is retrieved successfully.&nbsp; The default value of this setting is "" (empty) which means that PB will not run a local script at all after image captures.&nbsp; PunkBuster passes the full image filename with path as a parameter to the script.&nbsp; This is for advanced Admins who wish to automate the processing, archiving, and/or publishing of screenshots (such as to a web server).
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#playerpower">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tpbpp1.gif" border="0">
+
+<blockquote>
+
+<p>The PunkBuster Player Power facility was added to PB Server Software beginning with version 0.984.
+
+<p>This facility is not associated with the votekick system that is built into the game itself. Both systems work 
+independently of each other and can be used together or be enabled/disabled separately depending on the desires of each 
+PB Server Admin.
+
+<p>PB Player Power allows PB Server Admins to empower their trusted regular players with more weight in a new elective 
+process used to remove an undesirable player from the game server. Frequently, troublemakers who attack teammates, block 
+doorways, or otherwise ruin the gameplay are able to get around other methods of keeping them off of the server. This new 
+facility aims to tackle this issue so that gameplay on good public servers doesn't suffer when troublemaking punks show up.
+
+<p>Basically, every player on PB Servers has a power rating. Each PB Server Admin can add specific players to a locally 
+stored database which stores the power rating for those specific players between playing sessions. Additionally, a 
+"catch all" setting called <code>pb_sv_powerdef</code> holds the default power rating for players who are not in the 
+database. During gameplay, players may apply their power points against a player by requesting to have that player 
+kicked from the server. Each application of power points is reported to all players on the server so that all players 
+will be able to see when a player applies his/her power points against another player. Once enough power points have 
+accumulated against a given player, then that player is removed from the game and forced to wait a number of minutes 
+before being allowed to rejoin.
+
+<p>To add a specific player to the local PB Player Power database, use the <code>pb_sv_power</code> command; this command 
+takes two arguments: the power rating and the slot # of the player to be added. The <code>pb_sv_plist</code> command is used 
+to display a slot # for all connected players. The local PB Player Power database is stored in the pbpower.dat file. Each 
+entry is based on the guid of the player.
+
+<p>The power rating assigned to players may range from 0 to 100. Assigning a power of 0 to a player 
+means that the player's vote carries zero weight on the server and any requests by that player to kick other players using 
+this facility are completely ignored. A setting of 0 should normally be reserved for players who have shown themselves to 
+be untrustworthy from the standpoint of voting against their peers. Assigning a power of 100 to a player is further 
+distinguishing that player as a "deputy". There are a couple of additional points of interest involving deputies. 
+When at least one deputy is presently connected to a game server, then <b><i>only</i></b> deputies may apply their power 
+points on that server. Other players must appeal to the judgment of any and all deputies presently connected. Also, deputy 
+players cannot be removed from the game server using this facility.
+
+<p>The <code>pb_sv_powerdef</code> setting is used to set the number of power points allocated to players who are not in 
+the local PB Player Power database. Use the <code>pb_sv_powermin</code> setting to specify the 
+number of power points required to be applied to a given player before that player is removed from the game. The 
+<code>pb_sv_powerkicklen</code> setting holds the number of minutes that players must wait before being allowed to rejoin 
+when removed via this facility. To completely disable this facility, set <code>pb_sv_powerkicklen</code> to 0.
+
+<p>More information about how this facility is used from a player's perspective can be found in our related publication: 
+"PunkBuster for Players".
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#remote">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tremote1.gif" border="0">
+
+<blockquote>
+
+<p>Even Balance, Inc. will soon be offering a premium, optional hosting service for Server Admins who wish 
+   to remotely log screenshot and log file signatures in real time for automatic publication to a fully and openly 
+   accessible website.&nbsp; We will offer a similar service for Players.&nbsp; 
+   Each subscriber gets a separate page and each days' activity is further separated into web
+   pages.&nbsp; When this Service is available, 
+   more information will be available on our website at 
+   <a href="http://www.evenbalance.com" target="_blank">evenbalance.com</a>.
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+<a name="#faq">
+
+<!-- start section -->
+<table width="630" border="4" cellspacing="0" cellpadding="0" bordercolor="#990000"> <tr> <td>
+<table border="0" cellspacing="6" cellpadding="2" width="618"> <tr valign="top"> <td width="602" bgcolor="#fffeca"> <br>
+<span class="text2">
+<!-- start section -->
+
+<p><img src="tfaq1.gif" border="0">
+
+<blockquote>
+
+<p><b>The PunkBuster Server does not work even though everything is installed properly. What could be causing this?</b>
+
+<p>Check the fs_homepath game cvar from the game console (enter "\fs_homepath"). 
+Then, using the explorer program on your computer, verify that the path pointed to by fs_homepath does 
+in fact have a "pb" subfolder that includes at least these three files: pbsv.dll, pbcl.dll 
+and pbag.dll (or pbsv.so, pbcl.so, and pbag.so on Linux systems). If not, then either locate and 
+copy the "pb" folder from your RtCW installation into the fs_homepath location, or change the 
+fs_homepath cvar to point to your RtCW installation. Note that the "pb" folder must have read and 
+write permissions.
+
+<p><b>Do I have to re-configure my firewall or proxy to use PunkBuster?</b>
+
+<p>In general, if a connection can play the Game online successfully without PunkBuster, then there will be no need to make any changes to a firewall or proxy that may be in use when PunkBuster is Installed and Enabled.&nbsp; PunkBuster communicates over the Internet (and in LAN environments) using the same network channels created and used by the Game, and therefore requires no changes. If, however, you had to adjust your firewall to use the game 
+in the first place, you may need to extend that adjustment to include ports used by PB's auto-update feature. 
+PunkBuster Servers may use outgoing UDP Ports 24300 through 24399 to communicate with the PunkBuster Master Servers.
+
+<p><b>I use a rented game server which has PB installed, but I don't have access to a game console. Can I still use the PB Server?</b>
+
+<p>Sure you can by using the remote console (rcon) feature built into the game. Just use PB commands with rcon just like you would normal game commands with rcon. For example, if you wish to enable the PB Server, issue "rcon pb_sv_enable". Please see our <a href=#commsettings>Commands and Settings</a> section for more info.
+
+<p><b>I like the idea of checking the clients for specific cvars. Do you have a list of suggested cvars to check for?</b>
+
+<p>Yes, we offer a sample/suggested cvar file for download on our website's <a href=http://www.evenbalance.com/index.php?page=download target=_blank>download page</a>. This file contains sample/suggested cvar checks, you may want to edit these settings to fit your own requirements.
+
+<p><b>Can I link to your site?</b>
+
+<p>Yes, but please do not mirror our download files.&nbsp; One of the following buttons can be used to link to us if you like.<br><br>
+
+<a href=http://www.evenbalance.com target=_blank><img src="tbutton1.gif" border="0"></a>
+&nbsp;&nbsp;&nbsp;
+<a href=http://www.evenbalance.com target=_blank><img src="tbutton2.gif" border="0"></a>
+
+<p><b>Other questions?</b> Visit our online forum at <a href="http://www.evenbalance.com/cgi-bin/ikonboard/ikonboard.cgi" target=_blank>evenbalance.com</a>
+
+</blockquote>
+
+<!-- end section -->
+</span>
+<br> </td> </tr> </table>
+</td> </tr> </table> <br>
+<!-- end section -->
+
+</center>
+
+</body>
+
+</html>
