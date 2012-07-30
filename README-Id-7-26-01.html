@@ -1,0 +1,438 @@
+<html>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<title>Fixed Issues with TA and Q3 &ndash; 4-2-01</title>
+</head>
+<body link="blue" vlink="purple">
+
+<div>
+<h1>7-26-2001 (1.29g BETA)</h1>
+
+<h1></h1>
+
+<h1>If you experience any problems with this BETA version point
+release, please send email to <a href=
+"mailto:bugs@idsoftware.com">bugs@idsoftware.com</a></h1>
+
+<h1></h1>
+
+<h1></h1>
+
+<h1>NOTABLE CHANGES IN QUAKE III AND TEAM ARENA - (1.29f BETA)</h1>
+
+<p defanged_style='margin-left:.25in'><b></b></p>
+
+<p><b>NEW id CREATED PRO MAPS -</b> One of our newer employees,
+Fred Nilsson, is an avid fan tournament style game play, and is
+very interested in the professional gaming community. Via feedback
+from professional Quake 3 players, Fred has made some modifications
+to some of the more popular maps that shipped with Quake 3
+including &ldquo;The Camp Grounds&rdquo;, &ldquo;Lost World&rdquo;,
+&ldquo;The Proving Grounds&rdquo;, and &ldquo;Vertical
+Vengeance&rdquo; You can play them in the single player game by
+advancing to tier 7, or run them on your server by using the map
+names &ldquo;PRO-Q3DM6&rdquo;, &ldquo;PRO-Q3DM13&rdquo;,
+&ldquo;PRO-Q3TOURNEY2&rdquo; and, &ldquo;PRO-Q3TOURNEY4&rdquo;.
+These are a lot of fun! Give them a try!</p>
+
+<p defanged_style='margin-left:.25in'><b></b></p>
+
+<p><b>NEW NETWORK CODE</b> - There is a new compression system
+built into the network code of the latest point release.
+Essentially, this reduces the bandwidth usage of Quake 3 and Team
+Arena by a ratio of 5:1 over previous versions of the game. Modem
+players, as well as everyone else, should experience a significant
+improvement in internet game play because of this.</p>
+
+<p><b>AUTO UPDATE SYSTEM</b> - Within this release is an Auto
+Update system that can be used to at any time to check for and
+download updates to Quake 3 and Team Arena. When you install the
+point release a file will be created in your Quake III Arena
+directory and in the Start Menu called, &ldquo;Check For Quake III
+Arena Updates&rdquo;. Running this file will check our servers for
+updates and notify you if there is a newer version or inform you
+that your files are up to date. The auto updater will create a
+directory on your C: where downloaded updates will be stored. It is
+important that you DO NOT delete this directory.&nbsp; If you plan
+to uninstall Quake III, make sure to uninstall all of the point
+releases as well.</p>
+
+<p><b>NEW RAIL, ROCKET LAUNCHER, PLASMA GUN, and LIGHTNING GUN
+EFFECTS</b> - There have been several new weapon effects that
+we&rsquo;ve managed to sneak into this release. We&rsquo;ve turned
+them off in the game by default, but you can enable them from the
+console by pressing the ~ key and typing the following
+commands:</p>
+
+<p defanged_style='text-indent:.5in'>\cg_oldRail
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(enables the new rail effect)</p>
+
+<p defanged_style='text-indent:.5in'>\cg_oldRocket
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(enables the new rocket effect)</p>
+
+<p defanged_style='text-indent:.5in'>\cg_oldPlasma
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(enables the new plasma effect)</p>
+
+<p defanged_style='text-indent:.5in'>\cg_trueLightning
+0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(enables the new lightning gun effect)</p>
+
+<p>&nbsp;</p>
+
+<p defanged_style='margin-left:.5in'>In addition, the colors of the
+new rail effect can be changed with the cvars \color1 and \color2
+with values of 1 through 8. (ex. \color1 1 or \color2 5). The new
+Rail gun effect was donated from the Alliance mod team <a href=
+"http://www.planetquake.com/alliance/">http://www.planetquake.com/alliance/</a>
+The new Lightning gun effect was donated from the CPMA mod team <a
+href="http://www.promode.org/">http://www.promode.org/</a></p>
+
+<p defanged_style='margin-left:.25in'><b></b></p>
+
+<p><b>NEW CHEATING COUNTER MEASURES -</b> There has been quite a
+bit of new code added to make it much more difficult to cheat and
+hack the game. We&rsquo;d tell you more, but that would be
+defeating the purpose&hellip; Rest assured that it will be harder
+to cheat than ever before.</p>
+
+<p defanged_style='margin-left:.25in'><b></b></p>
+
+<p><b>NEW PROTOCOL CHANGE -</b> The changes made to improve network
+code and prevent cheating will make this and future version of
+Quake 3 and Team Arena incompatible with older versions. This will
+affect older versions of demos as well. We wish it were possible to
+maintain game compatibility through each release, however major
+code changes limit our ability to do so.</p>
+
+<p><b></b></p>
+
+<p><b>QUAKE III ARENA AND TEAM ARENA EDITING CHANGES</b></p>
+
+<p><b></b></p>
+
+<p><b defanged_style='mso-bidi-font-weight:normal'>TEAM SELECTION
+-</b> When a player starts a game with map or devmap the team logos
+displayed will be the last two teams used in the single player
+game. The console cvars <b>g_blueteam</b> and <b defanged_style=
+'mso-bidi-font-weight:normal'>g_redteam</b> commands will allow
+server admins to change the teams being played on dedicated
+servers.</p>
+
+<p defanged_style='margin-left:.25in'></p>
+
+<p><b defanged_style='mso-bidi-font-weight:normal'>Q3:TA TEAM
+CREATION</b> - It is now possible to create original Team Arena
+teams with new team logos, body models, head models, voices and
+skins. Previously the code had been designed to limit the game to
+use of two body models (James &amp; Janet). With this point
+release, hobbyists who know their way around the skills of&nbsp;
+model-making, animating, and skinning can make new team content for
+Team Arena. The &ldquo;how-to&rdquo; details for the creation of
+new teams are extensive and will be documented in a separate
+publication. These new teams will be available for use in single
+player, and multiplayer games.</p>
+
+<p></p>
+
+<p><b defanged_style='mso-bidi-font-weight:normal'>INCREASED
+VERSATILITY FOR USER-CREATED TEAM SKINS IN Q3A AND Q3:TA</b> - When
+a user-created skin for a model is accompanied by a set of
+similarly named matching team color skins, the game will now use
+those instead of the model&rsquo;s default team skin. For things to
+work right you have to have the following in the pak file for a
+blue team skin for and example skin for the Crash model name
+Hellion:</p>
+
+<p></p>
+
+<p>
+Hellion_blue.tga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+models\players\crash\</p>
+
+<p>
+Hellion_blue_f.tga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+models\players\crash\</p>
+
+<p>
+Hellion_blue_t.tga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+models\players\crash\</p>
+
+<p>
+Head_Hellion_blue.skin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+models\players\crash\</p>
+
+<p>
+Icon_Hellion_blue.tga&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+models\players\crash\</p>
+
+<p>
+Lower_Hellion_blue.skin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+models\players\crash\</p>
+
+<p>
+Upper_Hellion_blue.skin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+models\players\crash\</p>
+
+<p>
+Head_blue.skin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+models\players\crash\Hellion\</p>
+
+<p></p>
+
+<p defanged_style='margin-left:.5in'>Note that the
+head_hellion_blue.skin file must be in the crash directory and the
+head_blue.skin must be in the crash/Hellion directory for the model
+to work properly. A model configured in this manner will be
+back-compatible with earlier versions of Q3A.</p>
+
+<p></p>
+
+<p defanged_style='margin-left:.5in'>The search process for model
+skins has been refined for core Q3A and Q3:TA. Details will be in
+the Team Creation document to follow. Essentially, the game will
+look deeper into model directories when looking for model head
+selections.</p>
+
+<p></p>
+
+<p><b defanged_style='mso-bidi-font-weight:normal'>NEW MODEL
+ANIMATION COMMANDS &ndash;</b></p>
+
+<p defanged_style='margin-left:.5in'>Fixedlegs&nbsp; : put in the
+animation .cfg this command freezes the programmatic rotation of
+the legs.</p>
+
+<p>Fixedtorso : put in the animation .cfg this command freezes the
+programmatic rotation of the torso.</p>
+
+<p><b>MAPMAKING CHANGES </b> &ndash; ENTITIES CAN BE SET TO APPEAR (OR NOT)
+BASED ON GAME VERSION.</p>
+
+<p>Map makers now have the option to make their
+maps use different entity sets if a game is being played in
+original Quake III Arena or in Quake III: Team Arena. By adding one
+of the following key/value epairs, the mapper can create
+conditional tests that look for what code is being used or NOT
+being used to run the game.</h1>
+
+<p defanged_style='text-indent:.5in'>KEY: "notq3a"&nbsp; (i.e.; Not
+Quake III Arena)</p>
+
+<p defanged_style='margin-left:.5in'>VALUE: "1" or "0"&nbsp; The
+default value is zero for an unmarked entity. If this value is set
+to 1, the marked entity will not appear if the game is played with
+"vanilla" (unmodified) Quake III Arena game code. Example: A
+Chaingun from Q3:TA could be marked with this epair. It would show
+up in Q3:TA game, but not in a Q3A game.</p>
+
+<p defanged_style='text-indent:.5in'>KEY: "notta" (i.e.; Not
+Quake&nbsp;III: Team Arena)</p>
+
+<p defanged_style='margin-left:.5in'>VALUE: "1" or "0"&nbsp; The
+default value is zero for an unmarked entity. If this value is set
+to 1, the marked entity will not appear if the game is played with
+the Team Arena expansion set and its game types.</p>
+
+<p defanged_style='margin-left:.5in'>Should you want an entity to
+NOT appear in either game type (Q3A or Q3TA), you would set BOTH
+keys to 1. In this case, it would work with any other game mod
+which supports that entity</p>
+
+<p>If botplay is desired, these epairs should not be used on
+entities, such as func_statics, that significantly change the flow
+of the game map.</p>
+
+<p></p>
+
+<h3></h3>
+
+<h3>NOTE TO USERS WANTING TO UNINSTALL QUAKE 3</h3>
+
+<p>If you running a Windows OS and want to uninstall Quake III
+Arena and Quake III Team Arena it is EXTREMELY important that you
+follow these steps, in this order.</p>
+
+<p>1) From the control panel, remove any point releases that you
+have installed. They will be labeled (Quake III Arena Point Release
+(1.29f) BETA, or something similar).</p>
+
+<p>2) From the control panel, remove Quake III Team Arena, if you
+have it installed.</p>
+
+<p>3) From the control panel, remove Quake III Arena.</p>
+
+<h1>Fixed Issues with TA and Q3</h1>
+
+<p><b></b></p>
+
+<p><a name="OLE_LINK1"><b>7-26-01 (version 1.29g)</b></a></p>
+
+<p>Players joining (and apparently leaving) the game cause everyone
+to hitch</p>
+
+<p>fs_handleforfile: none free ERROR</p>
+
+<p>After last level of tier game doesn't stay on trophy screen,
+instead it takes you directly to next tier screen</p>
+
+<p>No sound in NT 4.0 at all with 1.29f PR</p>
+
+<p>There is a shader bug in Pro-q3dm6</p>
+
+<p>developer cheats like R_Showtris have been disabled in the PR
+(they were never disabled, the user simply needs to run the game
+with &ldquo;+set developer 1&rdquo; minus quotes, at the command
+line.</p>
+
+<p>made /startOrbit cheatprotected</p>
+
+<p>Rcon issues now resolved.</p>
+
+<p>fs_basegame isn't published to clients</p>
+
+<p>fixedlegs command in the animation config is apparently not
+working</p>
+
+<p>+ and &ndash; cvars fixed</p>
+
+ 
+
+<p><b></b></p>
+
+<p><b></b></p>
+
+<p><b>6-18-01 (version 1.29f)</b></p>
+
+<p>scoreboard problems within TA. Scoreboard was reporting the
+wrong number of players and ghost players</p>
+
+<p>Problems with NT 4.0 and Sound within version 1.27h</p>
+
+<p>single player crash when a player would replay q3dm0 in single
+player mode</p>
+
+<p>In TA, if a player gets an award sound in warmup, the sound will
+repeat for no reason once the map restarts</p>
+
+<p>single player bug that would change the fraglimit and capture
+limit of single player maps</p>
+
+<p>proxmine sounds trying to be loaded in non-TA game</p>
+
+<p>wrong "Transfer rate" being reported on autodownloads in CTF</p>
+
+<p>If a password on a dedicated server is set, bots cannot
+connect</p>
+
+<p>r_lodcurseerror is not cheat protected</p>
+
+<p>Single player all maps, can get stuck in third person view after
+round is over</p>
+
+<p>Crash - Scrolling through the players Handicap during single
+player match</p>
+
+<p>Auto-download problems in certain cases</p>
+
+<p>Player model animation/After giving orders, player becomes stuck
+in animation</p>
+
+<p>Users not being able to change music in maps</p>
+
+<p>Guard Cheat...Set your handicap at 10,000 via the console then
+pickup a guard. It sets your health at some insane value (16000 or
+so)</p>
+
+<p>Crash - starting a sever, filling all slots with bots</p>
+
+<p>Voteable maps are based on client's gametype - not server's</p>
+
+<p>set predictable player events to zero on spawn because the
+prediction is out of sync anyway</p>
+
+<p>double player entity events (double events a client plays on
+other players in the game)</p>
+
+<p>synced client shotgun spread pattern with server</p>
+
+<p>server crash on map load due to sending config strings</p>
+
+<p>Some of the orders in the in-game menu function wrong</p>
+
+<p>Mouse sensitivity being altered by changes made in code that
+communicates with direct input</p>
+
+<p>Demos in Quake III 1.27g not showing up</p>
+
+<p>+ \dir models/players/ tga.......the first letters of the
+filenames are omitted</p>
+
+<p>Add cvar "fs_baseGame" which allows people to base mods upon
+mods</p>
+
+<p>Quake3 - Single Player - Warnings received on q3dm0</p>
+
+<p>You don't hear the opponent taking the jumppad until u see
+him</p>
+
+<p>have a dedicated server reference the cgame.qvm in the last pk3
+found when alphabetically ordered; for pure</p>
+
+<p>If you use forcemodel now in singleplayer it will default you to
+sarge and not let you choose another model to use.</p>
+
+<p>TA defaults to setting a time limit instead of a frag limit on
+single player games</p>
+
+<p>Q3A/Q3:TA specific flag on entities</p>
+
+<p>In CTF, if a user times out with the flag it is gone from game
+until map is restarted</p>
+
+<p>"spawn inside a player" bug</p>
+
+<p>Add OSP TAB in TA and fixed alliance tab in server browser</p>
+
+<p>Quake3 - Single Player - Warnings received on q3dm0</p>
+
+<p>if a user times out with the flag it is gone from game until map
+is restarted</p>
+
+<p>TA and Q3 Screenshot overwrite bug.</p>
+
+<p>Voice taunt bug where sounds were being queued then released all
+at once.</p>
+
+<p>Dedicated server crash bug (Server would crash after 48hrs,
+every time)</p>
+
+<p>James model Error bug</p>
+
+<p>AutoJoin, Autobalence Bug...Probably related to scoreboard
+bug</p>
+
+<p>The intermission screen in a single player game has a button for
+"demo", that hints at a demo playback of the game that you just
+finished, however it does not work</p>
+
+<p>Shell - start server, CTF bot list is in FFA format</p>
+
+<p><b></b></p>
+
+<p>Very special thanks to Josh Ferguson and everyone at MindVision
+Software for all of their help.</p>
+
+<p defanged_style='margin-left:.25in'><b></b></p>
+</div>
+</body>
+</html>
+
