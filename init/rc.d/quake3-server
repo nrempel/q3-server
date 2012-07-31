@@ -1,0 +1,46 @@
+#!/bin/bash
+
+. /etc/rc.conf
+. /etc/rc.d/functions
+. /etc/conf.d/quake3-server
+
+NAME=quake3-server
+DAEMON=/srv/quake3-server/q3ded
+TMP=/tmp/quake3
+
+PID=$(pidof -o %PPID $DAEMON)
+case "$1" in
+  start)
+    stat_busy "Starting $NAME daemon"
+    if [ ! -d "$TMP" ]; then
+      mkdir /tmp/quake3
+      chown quake3:quake3 /tmp/quake3
+    fi
+    [ -z "$PID" ] && su -s /bin/bash -c "$DAEMON $ARGS &> /dev/null &" quake3
+    if [ $? -gt 0 ]; then
+      stat_fail
+    else
+       add_daemon $NAME
+       stat_done
+    fi
+    ;;
+  stop)
+    stat_busy "Stopping $NAME daemon"
+    [ ! -z "$PID" ]  && kill $PID &> /dev/null
+    if [ $? -gt 0 ]; then
+      stat_fail
+    else
+      rm_daemon $NAME
+      stat_done
+    fi
+    ;;
+  restart)
+    $0 stop
+    sleep 1
+    $0 start
+    ;;
+  *)
+    echo "usage: $0 {start|stop|restart}"
+esac
+exit 0
+

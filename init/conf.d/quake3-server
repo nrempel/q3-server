@@ -1,0 +1,1 @@
+ARGS="+set sv_punkbuster 0 +set fs_basepath /srv/quake3-server +set dedicated 2 +set com_hunkMegs 32 +set g_log server.log +exec server.cfg"
